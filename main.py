@@ -1,6 +1,4 @@
 import turtle
-#from time import sleep
-#from func import up,down,left,right
 def left():
     global dude
     dude.left(90)
@@ -28,22 +26,26 @@ def down():
     dude.backward(10)
     print(dude.position())
 
-
+#Initialise screen and set colours
 scrn=turtle.Screen()
 scrn.bgcolor("Grey")
 dude=turtle.Turtle()
+dude.color("orange")
+#Set cursor to point up
 dude.left(90)
+#Disable vfx delay of 10ms
 turtle.delay(0)
-#dude.ht()
+#dude.ht() #Hide the turtle head
+#Set speed to 0 for max speed
 dude.speed(0)
 #turtle.tracer(0,0) #removes screen updates, requires turtle.update to be called to draw
 dude.down()
-dude.color("orange")
+#Set keys to call functions
 scrn.onkey(up,"w")
 scrn.onkey(down,"s")
 scrn.onkey(left,"a")
 scrn.onkey(right,"d")
 scrn.onkey(quit,"q")
+#Start listening for key presses
 scrn.listen()
-#sleep(10)
 turtle.done()
