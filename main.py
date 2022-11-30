@@ -35,6 +35,6 @@ while x==0:
     else:
         print("Enter a valid option")
         continue
-
+print(dude.position())
 #sleep(10)
 turtle.done()
