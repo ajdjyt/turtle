@@ -1,19 +1,23 @@
 import turtle
-def left(dude):
+def left():
+    global dude
     dude.backward(1)
 
 
-def right(dude):
+def right():
+    global dude
     dude.forward(1)
 
 
-def up(dude):
+def up():
+    global dude
     dude.left(90)
     dude.forward(1)
     dude.right(90)
 
 
-def down(dude):
+def down():
+    global dude
     dude.right(90)
     dude.forward(1)
     dude.left(90)
