@@ -1,5 +1,6 @@
 import turtle
 from time import sleep
+from func import up,down,left,right
 scrn=turtle.Screen()
 scrn.bgcolor("Grey")
 dude=turtle.Turtle()
@@ -7,34 +8,10 @@ dude.color("orange")
 dude.down()
 x=0
 while x==0:
-    try:
-        print("Enter direction to move ")
-        print("0.exit")
-        print("1.Up")
-        print("2.Down")
-        print("3.Left")
-        print("4.Right")
-        dir=int(input(": "))
-    except:
-        print("Enter a number")
-        continue
-    if dir==0:
-        break
-    elif dir==1:
-        dude.left(90)
-        dude.forward(1)
-        dude.right(90)
-    elif dir==2:
-        dude.right(90)
-        dude.forward(1)
-        dude.left(90)
-    elif dir==3:
-        dude.backward(1)
-    elif dir==4:
-        dude.forward(1)
-    else:
-        print("Enter a valid option")
-        continue
-print(dude.position())
+    scrn.onkey(up(dude),key="w")
+    scrn.onkey(down(dude),key="s")
+    scrn.onkey(left(dude),key="a")
+    scrn.onkey(right(dude),key="d")
+    scrn.onkey(quit(),key="q")
 #sleep(10)
 turtle.done()
